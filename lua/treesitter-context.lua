@@ -244,7 +244,7 @@ local function get_text_for_node(node)
   local start_row, start_col = node:start()
   local end_row, end_col     = node:end_()
 
-  local node_text = vim.treesitter.query.get_node_text(node, 0)
+  local node_text = vim.treesitter.get_node_text(node, 0)
   if node_text == nil then return nil, nil end
 
   local lines = vim.split(node_text, '\n')
